@@ -1,0 +1,15 @@
+def solution(A):
+    A_bin=bin(A).replace("0b", "") #returns value in binary and removes prefix "ob"   
+   # A_bin1=format(A,"b") #also return binary without prefix ob
+    max_gap=[]
+    count=0
+    for i in A_bin:
+        if i=="1":
+            max_gap.append(count)
+            count=0
+        else:
+            count+=1
+    return (max(max_gap))
+
+#drive
+solution(20)
