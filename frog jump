@@ -1,12 +1,5 @@
-def solution(A):
-    B=[]
-    for x in A:
-        if x in B:
-            B.remove(x)
-        elif x not in B:
-            B.append(x)   
-        print(B)
-    odd=sum(B)
-    print("odd number is",odd)
-    return(odd)
-y=solution([9, 3, 9, 3, 9, 7, 9])
+import math
+def solution(X,Y,D):
+    jump_no=math.ceil((Y-X)/D)
+    return jump_no
+y=solution(10,85,30)
