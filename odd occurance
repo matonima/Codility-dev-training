@@ -1,0 +1,12 @@
+def solution(A):
+    B=[]
+    for x in A:
+        if x in B:
+            B.remove(x)
+        elif x not in B:
+            B.append(x)   
+        print(B)
+    odd=sum(B)
+    print("odd number is",odd)
+    return(odd)
+y=solution([9, 3, 9, 3, 9, 7, 9])
