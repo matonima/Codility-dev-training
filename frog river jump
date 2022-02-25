@@ -1,0 +1,7 @@
+def solution(X,A):
+    if X in A:
+        idx=A.index(X)
+    if X not in A:
+        idx=-1
+    return idx
+solution(2,A)
