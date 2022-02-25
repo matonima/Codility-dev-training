@@ -1,0 +1,8 @@
+def solution(N, A):
+    counter = [0]*N
+    for i in A:
+        if i<=N and i>=0: 
+            counter[i-1] += 1
+        else: 
+            counter = [max(counter) for i in range(len(counter))]           
+    return counter
