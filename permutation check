@@ -1,0 +1,16 @@
+def permcheck(A):
+    n=len(A)
+    A.sort()
+    min_A=min(A)
+    idx_min=A.index(min_A)
+    print(n,min_A,idx_min)
+    x=min_A
+    if n==1:
+        y=0
+    for i in range(n):
+        if x==A[i]:
+            y="permutation"# not added
+        elif x!=A[i]:
+            y="not permutation" #element needs to be added
+        x=x+1
+    return y
