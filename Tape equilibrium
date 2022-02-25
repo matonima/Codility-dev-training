@@ -1,0 +1,27 @@
+# tape equilibrium 23:35pm start 20 min
+def sol(A):
+    n=len(A)
+    print (n)
+    m=n-1 # possible split points
+    New_array_a=[]
+    New_array_b=[]
+    ans=[]
+    for i in range(m):
+        #split idx=i
+        New_array_a=A[0:i]
+        New_array_b=A[(i):n]
+        sum_a=sum(New_array_a)
+        sum_b=sum(New_array_b)
+        a=(sum_a-sum_b)
+        print(i, New_array_a, New_array_b, sum_a,sum_b,ans)
+        if a<0:
+           ans.append(-a)
+        else:
+           ans.append(a)
+    return (min(ans))
+
+
+
+
+A=[3,1,2,4,3]
+sol(A)
