@@ -1,0 +1,21 @@
+def solution(A):
+    A.sort()
+    n=len(A)
+    m=n+1
+    min_A=min(A)
+    B=[]
+    x=min_A
+    #print("Array sorted=",A)
+    #(print("min value=",x))
+    for i in range(m-1):
+        if x==A[i]:
+           # print("value",x, "found in array")
+            x=x+1
+            #print("x+1=",x)
+        elif x!=A[i]:
+            #print("value",x, " not found in array")
+            val=x
+            idx=i
+    A.insert(idx,val)
+    #print(A)
+    return(val)
