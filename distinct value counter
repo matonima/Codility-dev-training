@@ -1,0 +1,12 @@
+def solution(A):
+    A.sort()
+    B=[]
+    n=len(A)
+    if n==1:
+        B=A
+    for i in range(n):
+        if A[i] in B:
+            continue 
+        else:
+            B.append(A[i])
+    return len(B)
