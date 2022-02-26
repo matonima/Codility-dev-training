@@ -1,0 +1,11 @@
+def solution(A):
+    n=len(A)
+    max_val=0
+    for i in range(n):
+        for j in range(i+1,n):
+            for k in range(j+1,n):
+                prod=A[i]*A[j]*A[k]
+                print(i,j,k,"prod=",prod)
+                if prod>max_val:
+                    max_val=prod
+    return max_val
