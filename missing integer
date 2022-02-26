@@ -1,0 +1,23 @@
+def solution(A):
+    A.sort()
+    n=len(A)
+    m=n+1
+    min_A=min(A)
+    x=min_A
+    print("Array sorted=",A)
+    (print("min value=",x))
+    for i in range(m-1):
+        if A[i]>0:
+            if x==A[i]:
+                print("value",x, "found in array")
+                x=x+1
+                print("x+1=",x)
+            elif x not in A:
+                print("value",x, " not found in array")
+                val=x
+                idx=i
+        elif A[i]<0:
+            x=1
+    return(x)
+A = [-1, -3, -2]
+solution(A)
