@@ -1,0 +1,18 @@
+    n=len(A)
+    if n>1000000000:
+        out=-1
+    elif n>0 and n<1000000000:
+        out=n
+    return out
+    
+    #simple solution 
+    def sol_passingcars(A):
+    n=len(A)
+    car_pass=0
+    for i in range(n-1,-1,-1):
+        if A[i]>=0:
+            car_pass+=1
+            print(i,car_pass)
+            if car_pass>1000000000:
+                car_pass=-1
+    return car_pass
